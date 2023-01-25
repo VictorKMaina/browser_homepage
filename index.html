@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Browser Homepage</title>
-  </head>
-  <body>
-    <div id="app">
-      <div id="clock"></div>
-      <div id="background"></div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Browser Homepage</title>
+    </head>
+    <body>
+        <div id="greeting">Good morning</div>
+
+        <div id="datetime">
+            <div id="time"></div>
+            <div id="date"></div>
+        </div>
+
+        <div id="carousel">
+            <div class="background">
+                <div class="bgOverlay"></div>
+                <div class="bgImages">
+                    <img
+                        src="https://images.unsplash.com/photo-1674240568812-d7481f3699a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1856&q=80"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="sliderButtons">
+                <button type="button">
+                    <img src="./src/assets/left_caret.svg" alt="left caret" />
+                </button>
+                <button type="button">
+                    <img src="./src/assets/right_caret.svg" alt="right caret" />
+                </button>
+            </div>
+        </div>
+        <form autocomplete="off" class="addImageForm hidden">
+            <div class="addImageFields">
+                <div class="formGroup">
+                    <label for="url">Image URL</label>
+                    <input
+                        requried
+                        title="Image URL"
+                        type="text"
+                        name="url"
+                        id="url"
+                    />
+                </div>
+                <div class="formGroup">
+                    <label for="url">Description (optional)</label>
+                    <input
+                        title="Image description"
+                        type="text"
+                        name="description"
+                        id="description"
+                    />
+                </div>
+            </div>
+
+            <input
+                title="Check if image form is hidden"
+                type="radio"
+                name="imageFormHidden"
+                id="imageFormHidden"
+                checked
+                hidden
+            />
+
+            <div class="formButtons">
+                <button type="submit">Add image</button>
+                <a class="cancel">Cancel</a>
+            </div>
+        </form>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
 </html>

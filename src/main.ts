@@ -1,11 +1,24 @@
 import "./styles/index.scss"
-import { getTime } from "./clock"
+import { toggleForm } from "./form"
+import { renderDate, renderTime } from "./datetime"
 
-const app = document.querySelector<HTMLDivElement>("div#app")
-const clockElement = app?.querySelector<HTMLDivElement>("div#clock")
+// Handle image form events
+const imageForm = document.querySelector<HTMLFormElement>("form.addImageForm")
+const imageFormCancel = imageForm?.querySelector<HTMLAnchorElement>("a.cancel")
 
-if (clockElement) {
-    const hours = "08"
-    const minutes = "35"
-    clockElement.innerHTML = `${hours}:${minutes}`
+if (imageForm) {
+    imageForm.addEventListener("submit", (e) => {
+        e.preventDefault()
+        toggleForm(imageForm)
+    })
+
+    imageFormCancel?.addEventListener("click", () => {
+        toggleForm(imageForm)
+    })
+}
+
+// Set datetime on page
+window.onload = () => {
+    renderTime()
+    renderDate()
 }
