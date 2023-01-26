@@ -1,6 +1,6 @@
 import backgroundImages from "../backgroundImages/backgroundImages"
 import { ImageError } from "../backgroundImages/error"
-import { ImageCollection } from "../backgroundImages/image"
+import { ImageCollection } from "../backgroundImages/imageCollection"
 import { toggleImageForm } from "./toggleForm"
 
 const imageForm = document.querySelector<HTMLFormElement>("form.imageForm")

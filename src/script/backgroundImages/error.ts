@@ -36,3 +36,11 @@ export class ImageURLExistsError extends ImageError {
 
     image: Image
 }
+
+export class NoLocalStorageImageCollection extends ImageError {
+    constructor(message?: string) {
+        super(message || "Something went wrong.")
+        this.message = message || this.message
+        this.error = "No localStorage Image Collection"
+    }
+}

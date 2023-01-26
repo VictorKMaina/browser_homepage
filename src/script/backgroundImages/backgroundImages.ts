@@ -1,4 +1,4 @@
-import { ImageCollection } from "./image"
+import { ImageCollection } from "./imageCollection"
 
 const backgroundImages = new ImageCollection()
 
