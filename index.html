@@ -7,14 +7,14 @@
         <title>Browser Homepage</title>
     </head>
     <body>
-        <div id="greeting">Good morning</div>
+        <div class="greeting">Good morning</div>
 
-        <div id="datetime">
-            <div id="time"></div>
-            <div id="date"></div>
+        <div class="datetime">
+            <div class="time"></div>
+            <div class="date"></div>
         </div>
 
-        <div id="carousel">
+        <div class="carousel">
             <div class="background">
                 <div class="bgOverlay"></div>
                 <div class="bgImages">
@@ -33,43 +33,32 @@
                 </button>
             </div>
         </div>
-        <form autocomplete="off" class="addImageForm hidden">
-            <div class="addImageFields">
-                <div class="formGroup">
-                    <label for="url">Image URL</label>
-                    <input
-                        requried
-                        title="Image URL"
-                        type="text"
-                        name="url"
-                        id="url"
-                    />
-                </div>
-                <div class="formGroup">
-                    <label for="url">Description (optional)</label>
-                    <input
-                        title="Image description"
-                        type="text"
-                        name="description"
-                        id="description"
-                    />
-                </div>
+        <form autocomplete="off" class="imageForm hidden">
+            <div class="formGroup">
+                <label for="url">Image URL</label>
+                <input
+                    requried
+                    title="Image URL"
+                    type="text"
+                    name="imageUrl"
+                    id="imageUrl"
+                />
             </div>
-
-            <input
-                title="Check if image form is hidden"
-                type="radio"
-                name="imageFormHidden"
-                id="imageFormHidden"
-                checked
-                hidden
-            />
-
-            <div class="formButtons">
-                <button type="submit">Add image</button>
-                <a class="cancel">Cancel</a>
+            <div class="formGroup">
+                <label for="url">Description (optional)</label>
+                <input
+                    title="Image description"
+                    type="text"
+                    name="description"
+                    id="description"
+                />
+            </div>
+            <div class="formControl">
+                <button type="submit">Save image</button>
+                <a class="cancel toggleImageForm">Cancel</a>
             </div>
         </form>
-        <script type="module" src="/src/main.ts"></script>
+        <button class="toggleImageForm" type="button">Add image</button>
+        <script type="module" src="/src/script/main.ts"></script>
     </body>
 </html>

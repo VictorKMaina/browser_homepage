@@ -1,4 +1,21 @@
-import { TimeType, DateType } from "./types"
+window.onload = () => {
+    // Set datetime on page
+    renderTime()
+    renderDate()
+}
+
+export interface TimeType {
+    hours: string
+    minutes: string
+    amPM: string
+}
+
+export interface DateType {
+    day: string
+    date: string
+    month: string
+    year: number
+}
 
 function getCurrentTime(): TimeType {
     const datetime = new Date()
@@ -20,7 +37,7 @@ function getCurrentTime(): TimeType {
 export function renderTime(): void {
     const { hours, minutes, amPM } = getCurrentTime()
 
-    const timeElement = document.querySelector("#time")
+    const timeElement = document.querySelector("div.time")
     const hoursMinElement = document.createElement("div")
     const amPMElement = document.createElement("div")
 
@@ -69,7 +86,7 @@ function getCurrentDate(): DateType {
 
 export function renderDate(): void {
     const { day, date, month, year } = getCurrentDate()
-    const dateParentElement = document.querySelector("div#date")
+    const dateParentElement = document.querySelector("div.date")
 
     const dayElement = document.createElement("div")
     const dateMonthElement = document.createElement("div")
