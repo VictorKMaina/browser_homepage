@@ -1,8 +1,8 @@
 form.imageForm {
     position: absolute;
     bottom: 1.5rem;
-    left: 0;
     right: 0;
+    left: 0;
     margin: auto;
     width: calc(100% - 3rem);
     max-width: 400px;
@@ -72,16 +72,23 @@ form.imageForm {
             cursor: pointer;
         }
     }
+
+    div.error {
+        padding: 0.8rem;
+        background-color: lighten(red, 40);
+        color: darken(red, 25);
+        font-size: 0.8rem;
+    }
 }
 
 button.toggleImageForm {
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.5rem;
     right: 0;
     left: 0;
+    margin: auto;
 
     width: max-content;
-    margin: auto;
     padding: 0.8rem 1rem;
 
     font-size: inherit;
@@ -100,8 +107,19 @@ button.toggleImageForm {
     &:hover {
         padding: 0.8rem 1.5rem;
     }
+}
 
-    // &.hidden {
-    //     display: none;
-    // }
+div.imageSubmitSuccess {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.125rem;
+    opacity: 0;
+
+    top: 1.5rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: max-content;
 }

@@ -1,4 +1,5 @@
 const imageForm = document.querySelector("form.imageForm")
+const errorField = imageForm?.querySelector<HTMLDivElement>("div.error")
 
 // Toggle image form
 const imgFormToggles = document.querySelectorAll(".toggleImageForm")
@@ -36,7 +37,9 @@ export function toggleImageForm(buttonToggle: HTMLButtonElement): void {
             formAnimation.reverse()
             formAnimation.finished.then(() => {
                 imageForm.classList.add("hidden")
+                errorField?.setAttribute('hidden', 'hidden')
             })
+
         }
     }
 }

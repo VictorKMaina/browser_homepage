@@ -7,7 +7,7 @@
         <title>Browser Homepage</title>
     </head>
     <body>
-        <div class="greeting">Good morning</div>
+        <!-- <div class="greeting">Good morning</div> -->
 
         <div class="datetime">
             <div class="time"></div>
@@ -53,11 +53,13 @@
                     id="description"
                 />
             </div>
+            <div class="error" hidden></div>
             <div class="formControl">
                 <button type="submit">Save image</button>
                 <a class="cancel toggleImageForm">Cancel</a>
             </div>
         </form>
+        <div class="imageSubmitSuccess">Added successfully!</div>
         <button class="toggleImageForm" type="button">Add image</button>
         <script type="module" src="/src/script/main.ts"></script>
     </body>

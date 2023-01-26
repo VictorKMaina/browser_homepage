@@ -20,7 +20,8 @@ body {
 
 body {
     display: grid;
-    place-content: center;
+    justify-content: center;
+    align-content: center;
     min-height: 100%;
     position: relative;
 }
