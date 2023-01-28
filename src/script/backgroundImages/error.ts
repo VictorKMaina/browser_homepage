@@ -1,5 +1,11 @@
 import { Image } from "./image"
 
+/**
+ *
+ *
+ * @export
+ * @class ImageError
+ */
 export class ImageError {
     constructor(message: string) {
         this.message = message
@@ -10,6 +16,13 @@ export class ImageError {
     error: string
 }
 
+/**
+ *
+ *
+ * @export
+ * @class EmptyImageURLError
+ * @extends {ImageError}
+ */
 export class EmptyImageURLError extends ImageError {
     constructor(message?: string) {
         super(message || "Please enter a valid URL")
@@ -18,6 +31,13 @@ export class EmptyImageURLError extends ImageError {
     }
 }
 
+/**
+ *
+ *
+ * @export
+ * @class InvalidImageURLError
+ * @extends {ImageError}
+ */
 export class InvalidImageURLError extends ImageError {
     constructor(message?: string) {
         super(message || "Please enter a valid URL")
@@ -26,6 +46,13 @@ export class InvalidImageURLError extends ImageError {
     }
 }
 
+/**
+ *
+ *
+ * @export
+ * @class ImageURLExistsError
+ * @extends {ImageError}
+ */
 export class ImageURLExistsError extends ImageError {
     constructor(image: Image, message?: string) {
         super(message || "Image URL already exists")
@@ -37,6 +64,13 @@ export class ImageURLExistsError extends ImageError {
     image: Image
 }
 
+/**
+ *
+ *
+ * @export
+ * @class NoLocalStorageImageCollection
+ * @extends {ImageError}
+ */
 export class NoLocalStorageImageCollection extends ImageError {
     constructor(message?: string) {
         super(message || "Something went wrong.")
